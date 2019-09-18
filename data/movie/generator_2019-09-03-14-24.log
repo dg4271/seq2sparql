@@ -1,0 +1,127 @@
+DEBUG:root:1. attempt generator_query: select distinct ?a  ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'ko') . ?a wdt:P31 wd:Q11424 . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') . ?a wdt:P31 ?b } LIMIT 1000
+DEBUG:root:1000 matches for 1
+DEBUG:root:1. attempt generator_query: select distinct ?a   (str(?laba) as ?la) where { ?a wdt:P31 wd:Q11424 . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') . ?a wdt:P57 [] } LIMIT 1000
+DEBUG:root:1000 matches for 2
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a wdt:P31 wd:Q5 . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') . [] wdt:P57 ?a } LIMIT 1000
+DEBUG:root:1000 matches for 3
+DEBUG:root:1000 matches for 4
+DEBUG:root:1. attempt generator_query: select distinct ?a ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b wdt:P31 wd:Q5 . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'ko') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') . ?b wdt:P106 ?a . ?b wdt:P166 []. } LIMIT 1000
+DEBUG:root:1000 matches for 5
+DEBUG:root:1000 matches for 6
+DEBUG:root:1. attempt generator_query: select distinct ?a ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b wdt:P31 wd:Q5 . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'ko') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') . ?b wdt:P106 ?a . ?b wdt:P2031 []. } LIMIT 1000
+DEBUG:root:1000 matches for 7
+DEBUG:root:1. attempt generator_query: select distinct ?a ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'ko') . ?a wdt:P31 wd:Q5 . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') .   ?a wdt:P2031 [] . ?b wdt:P2031 [] .  filter( ?a != ?b) } LIMIT 1000
+DEBUG:root:1000 matches for 8
+DEBUG:root:1. attempt generator_query: select distinct ?a ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'ko') . ?a wdt:P31 wd:Q5 . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') .   ?a wdt:P2031 [] .  ?b wdt:P2031 [] .  filter( ?a != ?b) } LIMIT 1000
+DEBUG:root:1000 matches for 9
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') .  ?a wdt:P750 ?ditributor. ?a wdt:P31 wd:Q11424 . } LIMIT 1000
+DEBUG:root:1000 matches for 10
+DEBUG:root:1. attempt generator_query: select distinct ?a ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'ko') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') .  ?movie wdt:P750 ?a. ?movie wdt:P31 wd:Q11424 . } limit 1000
+DEBUG:root:1000 matches for 11
+DEBUG:root:1. attempt generator_query: select distinct ?a ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'ko') . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') .  ?movie wdt:P750 ?a. ?movie wdt:P136 ?b. ?movie wdt:P31 wd:Q11424 . } limit 1000
+DEBUG:root:1000 matches for 12
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') . ?a wdt:P31 wd:Q11424 . ?a wdt:P2047 [] . }
+DEBUG:root:7280 matches for 13
+DEBUG:root:1. attempt generator_query: select distinct ?a ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b wdt:P31 wd:Q11424 . ?b rdfs:label ?labb . FILTER(lang(?labb) = 'ko') . ?a wdt:P31 wd:Q11424 . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') .   ?a wdt:P31 wd:Q11424 . ?b wdt:P31 wd:Q11424 .  filter( ?a != ?b) } limit 1000
+DEBUG:root:1000 matches for 14
+DEBUG:root:1000 matches for 15
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a wdt:P31 wd:Q11424 . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') . ?a wdt:P31 wd:Q11424 .  } LIMIT 1000
+DEBUG:root:1000 matches for 16
+DEBUG:root:1. attempt generator_query: select distinct ?a  ?b  (str(?laba) as ?la)  (str(?labb) as ?lb) where { ?b rdfs:label ?labb . FILTER(lang(?labb) = 'ko') . ?a wdt:P31 wd:Q11424 . ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') . ?a wdt:P136 ?b . } LIMIT 1000
+DEBUG:root:1000 matches for 17
+DEBUG:root:1000 matches for 18
+DEBUG:root:1. attempt generator_query: select distinct ?a  (str(?laba) as ?la) where { ?a rdfs:label ?laba . FILTER(lang(?laba) = 'ko') .  ?a wdt:P161 ?actor . ?actor wdt:P569 ?age. } LIMIT 1000
+DEBUG:root:1000 matches for 19
+DEBUG:root:1000 matches for 20
+INFO:root:  5724 used resources in 31000 placeholder positions
+INFO:root:  1111 resources occur 	     1 times 	( 19.00 %) 
+INFO:root:  2476 resources occur 	     2 times 	( 43.00 %) 
+INFO:root:   473 resources occur 	     3 times 	(  8.00 %) 
+INFO:root:   466 resources occur 	     4 times 	(  8.00 %) 
+INFO:root:   182 resources occur 	     5 times 	(  3.00 %) 
+INFO:root:   158 resources occur 	     6 times 	(  2.00 %) 
+INFO:root:    78 resources occur 	     7 times 	(  1.00 %) 
+INFO:root:   135 resources occur 	     8 times 	(  2.00 %) 
+INFO:root:    57 resources occur 	     9 times 	(  0.00 %) 
+INFO:root:    82 resources occur 	    10 times 	(  1.00 %) 
+INFO:root:    49 resources occur 	    11 times 	(  0.00 %) 
+INFO:root:    81 resources occur 	    12 times 	(  1.00 %) 
+INFO:root:    43 resources occur 	    13 times 	(  0.00 %) 
+INFO:root:    52 resources occur 	    14 times 	(  0.00 %) 
+INFO:root:    45 resources occur 	    15 times 	(  0.00 %) 
+INFO:root:    38 resources occur 	    16 times 	(  0.00 %) 
+INFO:root:    25 resources occur 	    17 times 	(  0.00 %) 
+INFO:root:    28 resources occur 	    18 times 	(  0.00 %) 
+INFO:root:    19 resources occur 	    19 times 	(  0.00 %) 
+INFO:root:    14 resources occur 	    20 times 	(  0.00 %) 
+INFO:root:    10 resources occur 	    21 times 	(  0.00 %) 
+INFO:root:    11 resources occur 	    22 times 	(  0.00 %) 
+INFO:root:     5 resources occur 	    23 times 	(  0.00 %) 
+INFO:root:     3 resources occur 	    24 times 	(  0.00 %) 
+INFO:root:     4 resources occur 	    25 times 	(  0.00 %) 
+INFO:root:     4 resources occur 	    26 times 	(  0.00 %) 
+INFO:root:     3 resources occur 	    27 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    28 times 	(  0.00 %) 
+INFO:root:     2 resources occur 	    29 times 	(  0.00 %) 
+INFO:root:     2 resources occur 	    30 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    35 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    37 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    38 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    39 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    42 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    43 times 	(  0.00 %) 
+INFO:root:     3 resources occur 	    44 times 	(  0.00 %) 
+INFO:root:     2 resources occur 	    45 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    46 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    48 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    51 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    52 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    53 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    56 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    57 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    58 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    60 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    61 times 	(  0.00 %) 
+INFO:root:     4 resources occur 	    62 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    63 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    67 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    70 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    71 times 	(  0.00 %) 
+INFO:root:     2 resources occur 	    72 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    73 times 	(  0.00 %) 
+INFO:root:     2 resources occur 	    75 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    76 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    77 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   514 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   526 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    86 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    89 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    95 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   104 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   114 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   635 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   125 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   126 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   134 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   149 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   159 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   175 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   195 times 	(  0.00 %) 
+INFO:root:     2 resources occur 	   212 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   218 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   226 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   259 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   276 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   325 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   331 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   366 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   371 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   388 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   447 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	   970 times 	(  0.00 %) 
+INFO:root:     1 resources occur 	    82 times 	(  0.00 %) 
+INFO:root:     2 resources occur 	    85 times 	(  0.00 %) 
+INFO:root:dbo:Athlete contains: dbo:LacrossePlayer
+INFO:root:dbo:Person contains: <http://dbpedia.org/class/yago/Wikicat21st-centuryActors>, <http://dbpedia.org/class/yago/WikicatEnglishMusicians>, <http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>, <http://dbpedia.org/class/yago/Honoree110183757>, dbo:LacrossePlayer
+INFO:root:dbo:SportsTeam contains: dboBasketballTeam
+INFO:root:     0 not instanciated templates:

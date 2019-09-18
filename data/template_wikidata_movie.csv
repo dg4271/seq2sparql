@@ -1,0 +1,20 @@
+wd:Q11424;;;<A>가 <B>야?;ask where { <A> wdt:P31 <B> };select distinct ?a  ?b where { ?a wdt:P31 ?b } LIMIT 1000
+wd:Q11424;;;<A>의 감독이 누구야?;select ?a where { <A> wdt:P57 ?a };select distinct ?a  where { ?a wdt:P57 [] } LIMIT 1000
+wd:Q5;;;<A>가 감독한 영화는?;select ?a where { ?a wdt:P57 <A> };select distinct ?a where { [] wdt:P57 ?a } LIMIT 1000
+wd:Q5;;;<A>가 감독한 영화는 몇 편이야?;select (count(?a) as ?a) where { ?a wdt:P57 <A> };select distinct ?a where { [] wdt:P57 ?a } LIMIT 1000
+;wd:Q5;;<A> <B>가 수상한 상은?;select ?a where {<B> wdt:P106 <A> . <B> wdt:P166 ?b. };select distinct ?a ?b where { ?b wdt:P106 ?a . ?b wdt:P166 []. } LIMIT 1000
+;wd:Q5;;<A> <B>가 수상한 상의 수는?;select (count(?a) as ?a) where {<B> wdt:P106 <A> . <B> wdt:P166 ?b. };select distinct ?a ?b where { ?b wdt:P106 ?a . ?b wdt:P166 []. } LIMIT 1000
+;wd:Q5;;<A> <B>는 언제 데뷔했어?;select ?a where {<B> wdt:P106 <A> . <B> wdt:P2031 ?b. };select distinct ?a ?b where { ?b wdt:P106 ?a . ?b wdt:P2031 []. } LIMIT 1000
+wd:Q5;;;<A>가 <B>보다 더 먼저 데뷔했어?;ask where {   <A> wdt:P2031 ?a . <B> wdt:P2031 ?b .  FILTER(?a < ?b) };select distinct ?a ?b where {   ?a wdt:P2031 [] . ?b wdt:P2031 [] .  filter( ?a != ?b) } LIMIT 1000
+wd:Q5;;;<A>가 <B>보다 더 늦게 데뷔했어?;ask where {   <A> wdt:P2031 ?a .  <B> wdt:P2031 ?b .  FILTER(?a > ?b) };select distinct ?a ?b where {   ?a wdt:P2031 [] .  ?b wdt:P2031 [] .  filter( ?a != ?b) } LIMIT 1000
+;;;영화 <A>의 배급사는?;select distinct ?a where { <A> wdt:P31 wd:Q11424 . <A> wdt:P750 ?a . };select distinct ?a where {  ?a wdt:P750 ?ditributor. ?a wdt:P31 wd:Q11424 . } LIMIT 1000
+;;;<A>가 배급한 영화 알려줘;select distinct ?movie where { ?movie wdt:P750 <A>. ?movie wdt:P31 wd:Q11424 .  } limit 10;select distinct ?a ?b where {  ?movie wdt:P750 ?a. ?movie wdt:P31 wd:Q11424 . } limit 1000
+;;;<A>가 배급한 <B> 알려줘;select distinct ?movie where { ?movie wdt:P750 <A>. ?movie wdt:P136 <B>. ?movie wdt:P31 wd:Q11424 .  } limit 10;select distinct ?a ?b where {  ?movie wdt:P750 ?a. ?movie wdt:P136 ?b. ?movie wdt:P31 wd:Q11424 . } limit 1000
+;;;영화 <A>의 러닝타임 알려줘;select distinct ?a where { <A> wdt:P31 wd:Q11424 . <A> wdt:P2047 ?a . };select distinct ?a where { ?a wdt:P31 wd:Q11424 . ?a wdt:P2047 [] . }
+wd:Q11424;wd:Q11424;;<A>와 <B>  중 러닝타임이 더 긴 영화는?;select distinct ?movie where {  <A> wdt:P2047 ?duration1 . <B> wdt:P2047 ?duration2.  bind(if (?duration1 > ?duration2 , <A> , <B>) as ?movie) };select distinct ?a ?b where {   ?a wdt:P31 wd:Q11424 . ?b wdt:P31 wd:Q11424 .  filter( ?a != ?b) } limit 1000
+wd:Q11424;wd:Q11424;;<A>와 <B>  중 러닝타임이 더 짧은 영화는?;select distinct ?movie where {  <A> wdt:P2047 ?duration1 . <B> wdt:P2047 ?duration2.  bind(if (?duration1 < ?duration2 , <A> , <B>) as ?movie) };select distinct ?a ?b where {   ?a wdt:P31 wd:Q11424 . ?b wdt:P31 wd:Q11424 .  filter( ?a != ?b) } limit 1000
+wd:Q11424;;;<A>의 장르는 뭐야?;select ?a where { <A> wdt:P136 ?a .  };select distinct ?a where { ?a wdt:P31 wd:Q11424 .  } LIMIT 1000
+wd:Q11424;;;<A>의 장르는 <B>야?;ask where { <A> wdt:P136 <B>.  };select distinct ?a  ?b where { ?a wdt:P136 ?b . } LIMIT 1000
+wd:Q11424;;;<A>에 출연한 배우들은?;select distinct ?a where {  <A> wdt:P161 ?a .  };select distinct ?a where { ?a wdt:P31 wd:Q11424 .  } LIMIT 1000
+;;;<A>에 출연한 배우 중 나이가 가장 많은 사람은?;select distinct ?a where {  <A> wdt:P161 ?a . ?a wdt:P569 ?age. } order by asc(?age) limit 1;select distinct ?a where {  ?a wdt:P161 ?actor . ?actor wdt:P569 ?age. } LIMIT 1000
+;;;<A>에 출연한 배우 중 가장 어린 사람은?;select distinct ?a where {  <A> wdt:P161 ?a . ?a wdt:P569 ?age. } order by desc(?age) limit 1;select distinct ?a where {  ?a wdt:P161 ?actor . ?actor wdt:P569 ?age. } LIMIT 1000
