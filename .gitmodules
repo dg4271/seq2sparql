@@ -1,0 +1,6 @@
+[submodule "fairseq"]
+	path = fairseq
+	url = https://github.com/pytorch/fairseq.git
+[submodule "nmt"]
+	path = nmt
+	url = https://github.com/tensorflow/nmt.git
