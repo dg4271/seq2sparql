@@ -29,7 +29,7 @@ if __name__ == '__main__':
     dataset_file = os.path.splitext(args.dataset)[0]
     print dataset_file
     sparql_file = dataset_file + '/data.sparql'
-    en_file = dataset_file + '/data.en'
+    ko_file = dataset_file + '/data.ko'
 
     random.seed()
 
@@ -40,38 +40,38 @@ if __name__ == '__main__':
     dev_and_test = random.sample(xrange(lines), number_of_test_and_dev_examples)
     dev = random.sample(dev_and_test, number_of_dev_examples)
 
-    with open(sparql_file) as original_sparql, open(en_file) as original_en:
+    with open(sparql_file) as original_sparql, open(ko_file) as original_ko:
         sparql = original_sparql.readlines()
-        english = original_en.readlines()
+        korean = original_ko.readlines()
 
         dev_sparql_lines = []
-        dev_en_lines = []
+        dev_ko_lines = []
         train_sparql_lines = []
-        train_en_lines = []
+        train_ko_lines = []
         test_sparql_lines = []
-        test_en_lines = []
+        test_ko_lines = []
 
         for i in range(len(sparql)):
             sparql_line = sparql[i]
-            en_line = english[i]
+            ko_line = koglish[i]
             if i in dev_and_test:
                 if i in dev:
                     dev_sparql_lines.append(sparql_line)
-                    dev_en_lines.append(en_line)
+                    dev_ko_lines.append(ko_line)
                 else:
                     test_sparql_lines.append(sparql_line)
-                    test_en_lines.append(en_line)
+                    test_ko_lines.append(ko_line)
             else:
                 train_sparql_lines.append(sparql_line)
-                train_en_lines.append(en_line)
+                train_ko_lines.append(ko_line)
 
-        with open(dataset_file + '/train.sparql', 'w') as train_sparql, open(dataset_file + '/train.en', 'w') as train_en, \
-                open(dataset_file + '/valid.sparql', 'w') as dev_sparql, open(dataset_file + '/valid.en', 'w') as dev_en, \
-                open(dataset_file + '/test.sparql', 'w') as test_sparql, open(dataset_file + '/test.en', 'w') as test_en:
+        with open(dataset_file + '/train.sparql', 'w') as train_sparql, open(dataset_file + '/train.ko', 'w') as train_ko, \
+                open(dataset_file + '/valid.sparql', 'w') as dev_sparql, open(dataset_file + '/valid.ko', 'w') as dev_ko, \
+                open(dataset_file + '/test.sparql', 'w') as test_sparql, open(dataset_file + '/test.ko', 'w') as test_ko:
 
             train_sparql.writelines(train_sparql_lines)
-            train_en.writelines(train_en_lines)
+            train_ko.writelines(train_ko_lines)
             dev_sparql.writelines(dev_sparql_lines)
-            dev_en.writelines(dev_en_lines)
+            dev_Ko.writelines(dev_ko_lines)
             test_sparql.writelines(test_sparql_lines)
-            test_en.writelines(test_en_lines)
+            test_ko.writelines(test_ko_lines)

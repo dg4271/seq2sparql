@@ -173,7 +173,7 @@ def generate_dataset(templates, output_dir, file_mode):
     cache = dict()
 
     it = 0
-    with open(output_dir + '/data.en', file_mode) as english_questions, open(output_dir + '/data.sparql', file_mode) as sparql_queries:
+    with open(output_dir + '/data.ko', file_mode) as english_questions, open(output_dir + '/data.sparql', file_mode) as sparql_queries:
         for template in templates:
             it = it + 1
             print "for {}th template".format(it)
